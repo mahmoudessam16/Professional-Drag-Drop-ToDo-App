@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Design Tokens */
+@theme {
+  --color-bg: hsl(0 0% 98%);
+  --color-surface: hsl(233deg 100% 97.66%);
+
+  --color-text-primary: hsl(235 19% 35%);
+  --color-text-secondary: hsl(236 9% 61%);
+
+  --color-accent: hsl(234 39% 85%);
+  --color-border: hsl(237 14% 26%);
+  --color-hover: hsl(236 33% 92%);
+
+  --image-desktop: url("/images/bg-desktop-light.jpg");
+
+  --font-sans: "Josefin Sans", sans-serif;
+
+  --text-base: 18px;
+}
+
+.dark {
+  --color-bg: hsl(235 21% 11%);
+  --color-surface: hsl(235 24% 19%);
+
+  --color-text-primary: hsl(234 39% 85%);
+  --color-text-secondary: hsl(236 9% 61%);
+
+  --color-accent: hsl(235 16% 43%);
+  --color-border: hsl(233 11% 84%);
+  --color-hover: hsl(236 33% 92%);
+
+  --image-desktop: url("/images/bg-desktop-dark.jpg");
+}
+
+@media (max-width: 600px) {
+  :root {
+    --image-desktop: url("/images/bg-mobile-light.jpg");
+  }
+
+  .dark {
+    --image-desktop: url("/images/bg-mobile-dark.jpg");
+  }
+}
+
+@layer base {
+  .btn {
+    @apply text-text-secondary hover:text-text-primary cursor-pointer font-medium;
+  }
+}
+
+.task {
+  touch-action: none;
+}
