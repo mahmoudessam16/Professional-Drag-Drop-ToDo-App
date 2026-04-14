@@ -29,6 +29,9 @@ function App() {
           <Header theme={theme} toggleTheme={toggleTheme} />
           <Todos theme={theme} />
         </div>
+        <p className="text-text-secondary text-center mt-4">
+          Drag and drop to reorder list
+        </p>
       </ThemeContext.Provider>
     </main>
   );
